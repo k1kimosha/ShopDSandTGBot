@@ -37,7 +37,7 @@ class ShopLot {
      * @param {string} options.data.gallery Lot gallery
      * @param {number} options.data.type Lot type
      * @param {number} options.data.price Lot price
-     * @param {boolean} options.data.status Lot status
+     * @param {boolean} options.data.status Lot activate status
      * @returns {object} Status
      */
     async updateLot({ lot_uuid = null, seller_uuid = null, data }) {
