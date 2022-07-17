@@ -1,0 +1,39 @@
+{
+  "name": "shop-ds-and-tg-bot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./index.js",
+    "start": "node ./index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k1kimosha/ShopDSandTGBot.git"
+  },
+  "keywords": [
+    "Discrod",
+    "bot",
+    "DS",
+    "JS",
+    "JavaScript",
+    "Discrod.js",
+    "Telegraf.js",
+    "TG",
+    "Telegram"
+  ],
+  "author": "k1kimosha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k1kimosha/ShopDSandTGBot/issues"
+  },
+  "homepage": "https://github.com/k1kimosha/ShopDSandTGBot#readme",
+  "dependencies": {
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "telegraf": "^4.8.5"
+  }
+}
