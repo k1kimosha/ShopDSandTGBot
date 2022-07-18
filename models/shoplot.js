@@ -55,7 +55,7 @@ class ShopLot {
     };
 
     /**
-     * Create new shop lot
+     * Create new shop lot in database
      * @param {object} options Options
      * @param {string} options.lot_uuid Lot uuid
      * @param {string} options.seller_uuid Seller uuid
