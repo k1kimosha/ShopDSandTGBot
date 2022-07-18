@@ -1,15 +1,23 @@
 import { MessageActionRow, MessageButton, Modal, TextInputComponent } from "discord.js";
 
-
+/**
+ * ButtonsMenu controller
+ */
 class Buttons {
     /**
-     * 
-     * @param {object} options
-     * @param {number} options.rows_count
-     * @param {Array.<{customId: string, label: string, style: string}>} options.menus
-     * @returns 
+     * Create Buttons Menu
+     * @param {object} options Options
+     * @param {number} options.rows_count Count of rows (1-5)
+     * @param {object[]} options.menus Buttons in rows
+     * @param {string} options.menus[].customId Button id
+     * @param {string} options.menus[].label Button label
+     * @param {string} options.menus[].style Button style
+     * @param {string} options.menus[].emoji Button emoji
+     * @param {string} options.menus[].url Button url
+     * @param {boolean} options.menus[].disabled Disabled button
+     * @returns {object[]} Rows menu
      */
-    async createButtons ({rows_count, menus}) {
+    async createButtonsMenu ({rows_count, menus}) {
         let rows = [];
         for (let row = 0; row < rows_count; row++) {
             let menu = new MessageActionRow();
@@ -18,7 +26,9 @@ class Buttons {
                     customId: menus[row][button].customId,
                     label: menus[row][button].label,
                     style: menus[row][button].style,
-                    emoji: menus[row][button].emoji
+                    emoji: menus[row][button].emoji,
+                    url: menus[row][button].url,
+                    disabled: menus[row][button].disabled
                 }));
             };
             rows.push(menu);
@@ -29,6 +39,8 @@ class Buttons {
 
 }
 
+const buttonController = new Buttons();
+
 export {
-    Buttons
+    buttonController
 };
